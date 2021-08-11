@@ -81,6 +81,7 @@ private extension TabBarCoordinator {
             }
         }
         
+        controller?.hidesBarsOnSwipe = true
         return controller
     }
     
