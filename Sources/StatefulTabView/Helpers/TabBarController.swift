@@ -85,22 +85,4 @@ private extension TabBarController {
         
         tabBar.standardAppearance = appearance
     }
-    
-    func navigationController(in viewController: UIViewController) -> UINavigationController? {
-        var controller: UINavigationController?
-        
-        if let navigationController = viewController as? UINavigationController {
-            return navigationController
-        }
-        
-        viewController.children.forEach {
-            if let navigationController = $0 as? UINavigationController {
-                controller = navigationController
-            } else {
-                controller = navigationController(in: $0)
-            }
-        }
-        
-        return controller
-    }
 }
