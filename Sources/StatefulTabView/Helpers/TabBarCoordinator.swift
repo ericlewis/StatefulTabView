@@ -70,6 +70,7 @@ private extension TabBarCoordinator {
         var controller: UINavigationController?
         
         if let navigationController = viewController as? UINavigationController {
+            navigationController.hidesBarsOnSwipe = true
             return navigationController
         }
         
